@@ -47,8 +47,6 @@ export async function createGoalCompletion({
 
   const { completionCount, desiredWeeklyFrequency } = result[0];
 
-  console.log([completionCount, desiredWeeklyFrequency]);
-
   if (completionCount >= desiredWeeklyFrequency) {
     throw new Error("Goal already completed this week!");
   }
